@@ -1,0 +1,31 @@
+--Create a clothing store database
+
+CREATE TABLE clothes (id INTEGER PRIMARY KEY,name TEXT, quantity INTEGER,price INTEGER,aisle INTEGER);
+
+INSERT INTO clothes VALUES (1, "Tops",5,25,5);
+INSERT INTO clothes VALUES (2, "Jeans",10,50,1);
+INSERT INTO clothes VALUES (3, "Dresses",7,35,2);
+INSERT INTO clothes VALUES (4, "Shirts",2,10,4);
+INSERT INTO clothes VALUES (5, "Jackets",3,15,3);
+INSERT INTO clothes VALUES (6, "Socks",6,30,3);
+INSERT INTO clothes Values (7, "Belts",12,100,6);
+INSERT INTO clothes VALUES (8, "Hat",11,55,10);
+INSERT INTO clothes VALUES (9, "Gloves",1,5,9);
+INSERT INTO clothes VALUES (10, "Bags",15,75,12);
+INSERT INTO clothes VALUES (11, "Shoes",8,40,11);
+INSERT INTO clothes VALUES (12, "Sandals",4,20,13);
+INSERT INTO clothes VALUES (13, "Pyjamas",14,130,7);
+INSERT INTO clothes VALUES (14, "Lingerie",9,45,15);
+INSERT INTO clothes VALUES (15, "Leggings",13,120,14);
+
+--Display the database ordered by price
+
+SELECT * FROM clothes ORDER BY PRICE;
+
+--What is the average price of the clothes?
+
+SELECT AVG (price) FROM clothes;
+
+--Which aisle has the maximum clothes?
+
+SELECT aisle, MAX(quantity) FROM clothes;
